@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Massage Ayurvédique | Horizon Zen</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+
+<body>
+
+<header>
+
+    <div class="navbar">
+        <div class="nav-spacer"></div>
+
+        <div class="logo-container">
+            <a href="/">
+                <img src="{{ url_for('static', filename='sh.png') }}"
+                     alt="santé.horizon"
+                     class="titre-logo">
+            </a>
+        </div>
+
+        <nav class="nav-links">
+            <a href="/">Accueil</a>
+            <a href="/philosophie">Ma philosophie</a>
+
+            <a href="https://www.instagram.com/sante.horizon/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="instagram-nav">
+                Instagram
+            </a>
+        </nav>
+
+    </div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero hero-ayurvedique">
+
+    <div class="hero-content">
+
+        <h2>Le Massage Ayurvédique</h2>
+
+        <p>
+            Un massage ancestral venu d'Inde qui harmonise le corps,
+            l'esprit et l'énergie vitale. Il favorise un profond
+            équilibre intérieur tout en procurant une relaxation
+            durable et revitalisante.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- HISTOIRE -->
+
+<section class="services">
+
+    <div class="hero-content">
+
+        <h2>L'histoire du massage ayurvédique</h2>
+
+        <p>
+            Le massage ayurvédique puise ses origines dans l'Ayurveda,
+            une médecine traditionnelle indienne pratiquée depuis plus
+            de 5 000 ans. Le mot « Ayurveda » signifie
+            « science de la vie » et repose sur une approche globale
+            du bien-être.
+        </p>
+
+        <p>
+            Selon cette tradition, la santé dépend de l'équilibre entre
+            le corps, le mental et les énergies vitales appelées
+            « doshas ». Le massage fait partie intégrante de cette
+            philosophie et contribue à maintenir cette harmonie.
+        </p>
+
+        <p>
+            Réalisé avec des huiles végétales chaudes et des mouvements
+            variés, il associe pressions, glissements et manœuvres
+            profondes afin de stimuler la circulation, détendre les
+            muscles et rééquilibrer les énergies du corps.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- BIENFAITS -->
+
+<section class="services" style="background:#f3e9dc;">
+
+    <div class="hero-content">
+
+        <h2>Les bienfaits</h2>
+
+        <p>
+            Le massage ayurvédique offre de nombreux bienfaits pour le
+            corps comme pour l'esprit.
+        </p>
+
+        <ul style="text-align:left; line-height:2; max-width:700px; margin:auto;">
+
+            <li>✔ Réduit le stress et favorise une profonde détente.</li>
+
+            <li>✔ Stimule la circulation sanguine et lymphatique.</li>
+
+            <li>✔ Libère les tensions musculaires.</li>
+
+            <li>✔ Favorise l'élimination des toxines.</li>
+
+            <li>✔ Améliore la qualité du sommeil.</li>
+
+            <li>✔ Redonne énergie et vitalité.</li>
+
+            <li>✔ Contribue à rééquilibrer le corps et l'esprit.</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+<!-- DÉROULEMENT -->
+
+<section class="services">
+
+    <div class="hero-content">
+
+        <h2>Comment se déroule une séance ?</h2>
+
+        <p>
+            La séance débute par un temps d'échange afin de mieux
+            comprendre vos besoins, votre état de forme et vos attentes.
+        </p>
+
+        <p>
+            Le massage est réalisé avec une huile végétale chaude,
+            appliquée sur l'ensemble du corps. Les gestes alternent
+            mouvements fluides, pressions et étirements doux afin de
+            relancer l'énergie et d'apporter une détente profonde.
+        </p>
+
+        <p>
+            Chaque séance est adaptée à votre rythme pour vous offrir
+            un moment personnalisé, dans le respect de votre corps et
+            de votre bien-être.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- POUR QUI -->
+
+<section class="services" style="background:#f3e9dc;">
+
+    <div class="hero-content">
+
+        <h2>À qui s'adresse ce massage ?</h2>
+
+        <p>
+            Le massage ayurvédique s'adresse à toute personne souhaitant
+            retrouver un équilibre physique et émotionnel, diminuer son
+            niveau de stress ou simplement prendre soin d'elle.
+        </p>
+
+        <p>
+            Il est particulièrement apprécié en période de fatigue,
+            lors de changements de rythme ou pour accompagner une
+            démarche globale de bien-être.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- RETOUR -->
+
+<section class="contact">
+
+    <h2>Envie de découvrir ce massage&nbsp;?</h2>
+
+    <p>
+        Accordez-vous un véritable moment de reconnexion et laissez
+        l'Ayurveda vous guider vers un mieux-être durable.
+    </p>
+
+    <a href="{{ url_for('index') }}" class="btn-retour">
+        Retour
+    </a>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>&copy; 2026 Horizon Zen - Tous droits réservés.</p>
+
+</footer>
+
+</body>
+
+</html>

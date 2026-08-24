@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>santé.horizon - Massage à domicile Annecy</title>
+    <meta name="description"
+      content="Massage à domicile à Annecy. Massages détente, bien-être et équilibre.">
+    <meta name="robots" content="index, follow">
+    <!-- <link rel="canonical" href="https://ton-domaine.fr/"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">                  <!--responsive--> 
+</head>
+
+<body>
+
+<header>
+
+    <div class="navbar">
+        <div class="nav-spacer"></div>
+
+        <div class="logo-container">
+            <a href="/">
+                <img src="{{ url_for('static', filename='sh.png') }}"
+                     alt="santé.horizon"
+                     class="titre-logo">
+            </a>
+        </div>
+
+        <nav class="nav-links">
+            <a href="/">Accueil</a>
+            <a href="/philosophie">Ma philosophie</a>
+
+            <a href="https://www.instagram.com/sante.horizon/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="instagram-nav">
+                Instagram
+            </a>
+        </nav>
+
+    </div>
+
+    <!-- <p class="slogan">Massage à domicile à Annecy & environs</p> -->
+
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h2>Retrouvez votre équilibre</h2>
+
+        <p>
+            Accordez-vous un moment de détente et de sérénité.<br>
+            Le massage est une invitation à ralentir, à relâcher les tensions du quotidien et à retrouver
+            une sensation de bien-être profond.
+        </p>
+
+        <p>
+            Grâce à des gestes harmonieux et enveloppants, chaque séance favorise la relaxation,
+            apaise le stress et procure un véritable moment de ressourcement pour le corps et l'esprit.
+        </p>
+
+        <p>
+            Que vous souhaitiez faire une pause, vous détendre après une période intense ou simplement
+            prendre soin de vous, offrez-vous une parenthèse de douceur dédiée à votre bien-être.
+        </p>
+    </div>
+</section>
+
+<section class="services">
+    <h2>Les massages proposés</h2>
+
+    <div class="cards">
+
+        <!-- Massage californien -->
+        <a href="{{ url_for('massage_californien') }}" class="card">
+            <img src="{{ url_for('static', filename='presta.jpg') }}" alt="Massage californien">
+
+            <h3>Massage californien</h3>
+            <p>
+                Le massage californien est une approche douce et enveloppante,
+                basée sur des mouvements fluides qui favorisent une détente profonde
+                du corps et de l'esprit.
+            </p>
+            <span class="btn-card">En savoir plus </span>
+        </a>
+
+        <!-- Massage ayurvédique -->
+        <a href="{{ url_for('massage_ayurvedique') }}" class="card">
+            <img src="{{ url_for('static', filename='massageindien.jpg') }}" alt="Massage ayurvédique">
+
+            <h3>Massage ayurvédique</h3>
+            <p>
+                Issu de la tradition indienne, il rééquilibre les énergies du corps,
+                stimule la circulation et favorise une harmonisation globale
+                grâce à des huiles chaudes.
+            </p>
+            <span class="btn-card">En savoir plus </span>
+        </a>
+
+    </div>
+</section>
+
+<section class="services upcoming-services">
+    <h2>Prestations à venir</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='deep_tissue.png') }}" alt="Massage Deep Tissue">
+
+            <h3>Massage Deep Tissue</h3>
+            <p>
+                Massage ciblé permettant de travailler les tissus profonds,
+                idéal pour soulager les tensions musculaires persistantes
+                et améliorer la mobilité.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='chineitsang.png') }}" alt="Chi Nei Tsang">
+
+            <h3>Chi Nei Tsang</h3>
+            <p>
+                Technique issue de la tradition taoïste centrée sur l'abdomen,
+                visant à libérer les blocages émotionnels et énergétiques
+                pour retrouver un équilibre global.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='massage_thaï_sol.jpg') }}" alt="Massage thaï au sol">
+
+            <h3>Massage thaï au sol</h3>
+
+            <p>
+                Pratiqué sur un futon au sol et habillé, le massage thaï associe
+                pressions, étirements et mobilisations articulaires pour favoriser
+                la circulation de l'énergie, améliorer la souplesse et procurer une
+                profonde sensation de détente.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- <section class="contact">
+    <h2>Me contacter</h2>
+
+
+<form method="POST" action="/contact">
+    <input type="text" name="nom" placeholder="Votre nom" required>
+    <input type="email" name="email" placeholder="Votre email" required>
+    <textarea name="message" placeholder="Votre message" required></textarea>
+    <button type="submit">Envoyer</button>
+</form>
+
+{% if success %}
+    <p class="success">Message envoyé ✔</p>
+{% endif %}
+
+</section> -->
+
+<footer>
+    <p>© 2026 santé.horizon - Annecy</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Massage Californien | Horizon Zen</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+
+<header>
+
+    <div class="navbar">
+        <div class="nav-spacer"></div>
+
+        <div class="logo-container">
+            <a href="/">
+                <img src="{{ url_for('static', filename='sh.png') }}"
+                     alt="santé.horizon"
+                     class="titre-logo">
+            </a>
+        </div>
+
+        <nav class="nav-links">
+            <a href="/">Accueil</a>
+            <a href="/philosophie">Ma philosophie</a>
+
+            <a href="https://www.instagram.com/sante.horizon/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="instagram-nav">
+                Instagram
+            </a>
+        </nav>
+
+    </div>
+
+    <!-- <p class="slogan">Massage à domicile à Annecy & environs</p> -->
+
+</header>
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h2>Le Massage Californien</h2>
+
+            <p>
+                Une expérience sensorielle unique où douceur, bienveillance
+                et relaxation profonde se rencontrent pour offrir un véritable
+                moment de reconnexion avec soi-même.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- HISTOIRE -->
+
+    <section class="services">
+
+        <div class="hero-content">
+
+            <h2>L'histoire du massage californien</h2>
+
+            <p>
+                Le massage californien est apparu au début des années 1970,
+                en Californie, aux États-Unis. Il est né dans un contexte où
+                le développement personnel, la relaxation et le bien-être
+                prenaient une place importante.
+            </p>
+
+            <p>
+                Il a été développé à l'Institut Esalen, un centre reconnu pour
+                ses recherches sur les approches thérapeutiques et le
+                développement humain. Les praticiens cherchaient une manière
+                d'aider les personnes à retrouver une connexion harmonieuse
+                entre leur corps et leurs émotions.
+            </p>
+
+            <p>
+                Contrairement aux massages purement musculaires, le massage
+                californien privilégie une approche globale de la personne.
+                Grâce à de longs mouvements fluides, lents et enveloppants,
+                il invite au lâcher-prise et procure une profonde sensation
+                de sécurité et de bien-être.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- BIENFAITS -->
+
+    <section class="services" style="background:#f3e9dc;">
+
+        <div class="hero-content">
+
+            <h2>Les bienfaits</h2>
+
+            <p>
+                Le massage californien est reconnu pour ses nombreux effets
+                positifs sur le corps et l'esprit.
+            </p>
+
+            <ul style="text-align:left; line-height:2; max-width:700px; margin:auto;">
+
+                <li>✔ Favorise une profonde relaxation.</li>
+
+                <li>✔ Diminue le stress et les tensions émotionnelles.</li>
+
+                <li>✔ Relâche les tensions musculaires.</li>
+
+                <li>✔ Améliore la circulation sanguine et lymphatique.</li>
+
+                <li>✔ Apaise le système nerveux.</li>
+
+                <li>✔ Favorise un sommeil réparateur.</li>
+
+                <li>✔ Permet de retrouver une meilleure conscience de son corps.</li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+    <!-- DÉROULEMENT -->
+
+    <section class="services">
+
+        <div class="hero-content">
+
+            <h2>Comment se déroule une séance ?</h2>
+
+            <p>
+                Chaque séance débute par un moment d'échange afin de comprendre
+                vos attentes, votre état de fatigue ou les éventuelles tensions
+                que vous ressentez.
+            </p>
+
+            <p>
+                Le massage est ensuite réalisé avec une huile végétale chaude.
+                Les mouvements sont lents, harmonieux et continus afin de créer
+                une sensation d'enveloppement et de détente profonde.
+            </p>
+
+            <p>
+                Le rythme est adapté à chaque personne pour offrir un soin
+                personnalisé et respectueux de vos besoins.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- POUR QUI -->
+
+    <section class="services" style="background:#f3e9dc;">
+
+        <div class="hero-content">
+
+            <h2>À qui s'adresse ce massage ?</h2>
+
+            <p>
+                Le massage californien convient à toute personne souhaitant
+                prendre soin d'elle et s'offrir une véritable pause dans un
+                quotidien souvent chargé.
+            </p>
+
+            <p>
+                Il est particulièrement recommandé en période de stress,
+                de fatigue, après une charge émotionnelle importante
+                ou tout simplement pour retrouver calme et sérénité.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- RETOUR -->
+
+    <section class="contact">
+
+        <h2>Envie de découvrir ce massage&nbsp;?</h2>
+
+        <p>
+            Offrez-vous un moment de détente profonde et laissez-vous
+            porter par la douceur du massage californien.
+        </p>
+
+        <a href="{{ url_for('index') }}" class="btn-retour">
+            Retour
+        </a>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>&copy; 2026 Horizon Zen - Tous droits réservés.</p>
+
+    </footer>
+
+</body>
+
+</html>
