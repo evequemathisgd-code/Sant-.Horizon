@@ -6,32 +6,36 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #FFF9EC;
+    color: #35452F;
+}
+
 img {
     max-width: 100%;
     height: auto;
 }
 
-/* ==========================================================
-   GLOBAL
-========================================================== */
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #fbf6ef;
-    color: #3a2f2a;
+a {
+    color: inherit;
 }
 
 blockquote {
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
-
     text-align: center;
     font-size: 1.6rem;
     font-style: italic;
     color: #35251F;
 }
+
 
 /* ==========================================================
    HEADER
@@ -58,11 +62,6 @@ header h1 {
     height: auto;
 }
 
-/* .logo-container {
-    position: static;
-    transform: none;
-} */
-
 .logo-container {
     grid-column: 2;
     justify-self: center;
@@ -79,27 +78,10 @@ header h1 {
     font-size: 1rem;
 }
 
+
 /* ==========================================================
    NAVBAR
 ========================================================== */
-
-/* .navbar {
-    width: 100%;
-    height: 110px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    position: sticky;
-    top: 0;
-
-    padding: 15px 5%;
-
-    background: #35251F;
-
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
-} */
 
 .navbar {
     display: grid;
@@ -109,10 +91,13 @@ header h1 {
     height: 110px;
     padding: 0 5%;
 
-    background: #35251F;
+    background: #355E3B;
+
     position: sticky;
     top: 0;
     z-index: 1000;
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
 }
 
 .navbar404 {
@@ -136,7 +121,7 @@ header h1 {
 
 .nav-spacer {
     justify-self: start;
-    width: 280px; /* même largeur que les nav-links */
+    width: 280px;
 }
 
 .nav-links {
@@ -152,17 +137,21 @@ header h1 {
     position: relative;
 
     text-decoration: none;
-    color: #f3e9dc;
+    color: #FFF9EC;
 
     font-size: 1rem;
     font-weight: 500;
 
-    transition: color 0.3s ease;
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #a58b73;
+    color: #DFAF00;
 }
+
+/* Ligne jaune sous les liens */
 
 .nav-links a::after {
     content: "";
@@ -172,9 +161,9 @@ header h1 {
     bottom: -6px;
 
     width: 0;
-    height: 2px;
+    height: 3px;
 
-    background: #a58b73;
+    background: #DFAF00;
 
     transition: width 0.3s ease;
 }
@@ -183,17 +172,38 @@ header h1 {
     width: 100%;
 }
 
+
+/* ==========================================================
+   BOUTON INSTAGRAM NAVIGATION
+========================================================== */
+
 .instagram-nav {
     padding: 10px 18px;
 
-    border: 1px solid #a58b73;
+    border: 2px solid #DFAF00;
     border-radius: 30px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.instagram-nav::after {
+    display: none;
 }
 
 .instagram-nav:hover {
-    background: #fbf6ef;
-    color: white;
+    background: #DFAF00;
+    color: #355E3B !important;
+
+    transform: translateY(-2px);
 }
+
+
+/* ==========================================================
+   ANCIENS LIENS INSTAGRAM
+========================================================== */
 
 .instagram-link {
     position: absolute;
@@ -217,6 +227,7 @@ header h1 {
     height: auto;
 }
 
+
 /* ==========================================================
    HERO
 ========================================================== */
@@ -238,7 +249,7 @@ header h1 {
             rgba(0, 0, 0, 0.4),
             rgba(0, 0, 0, 0.4)
         ),
-        url("/static/presta.jpg");
+        url("/static/annecy.jpg");
 
     background-size: cover;
     background-position: center;
@@ -306,6 +317,11 @@ header h1 {
     background-repeat: no-repeat;
 }
 
+
+/* ==========================================================
+   HERO CONTENT
+========================================================== */
+
 .hero-content,
 .herobis-content {
     max-width: 800px;
@@ -336,46 +352,50 @@ header h1 {
     margin-bottom: 20px;
 }
 
-/* ==========================================================
-   CARDS
-========================================================== */
-
-.card {
-    display: block;
-    color: inherit;
-    text-decoration: none;
-}
-
-.card:visited {
-    color: inherit;
-}
-
-.card:hover {
-    color: inherit;
-    text-decoration: none;
-}
-
-.card {
-    display: block;
-    color: inherit;
-    text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 24px rgba(0,0,0,.12);
-}
 
 /* ==========================================================
    SERVICES
 ========================================================== */
 
 .services {
-    padding: 50px 20px;
+    padding: 60px 20px;
     text-align: center;
-    background: #fbf6ef;
+    background: #E9A15A;
 }
+
+.services h2 {
+    color: #35452F;
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+
+
+/* ==========================================================
+   PRESTATIONS À VENIR
+========================================================== */
+
+.upcoming-services {
+    background: #F4D35E;
+}
+
+.upcoming-services h2 {
+    color: #35452F;
+}
+
+.upcoming-services h2::after {
+    content: " (prochainement)";
+    font-size: 0.7em;
+    color: #8A6500;
+}
+
+.upcoming-services .card {
+    background: #E7F0DF;
+}
+
+
+/* ==========================================================
+   CARTES
+========================================================== */
 
 .cards {
     display: flex;
@@ -385,15 +405,48 @@ header h1 {
 }
 
 .card {
+    display: block;
+
     flex: 1 1 280px;
     max-width: 350px;
 
     padding: 20px;
 
-    background: #ffffff;
+    background: #FFFFFF;
+
+    color: inherit;
+    text-decoration: none;
+
     border-radius: 14px;
 
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.card:visited {
+    color: inherit;
+}
+
+.card:hover {
+    color: inherit;
+    text-decoration: none;
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+    color: #35452F;
+    margin-top: 10px;
+}
+
+.card p {
+    line-height: 1.6;
 }
 
 .card img {
@@ -406,30 +459,54 @@ header h1 {
     margin-bottom: 10px;
 }
 
-/* ---------- Prestations à venir ---------- */
 
-.upcoming-services {
-    background: #f3e9dc;
+/* ==========================================================
+   BOUTON DANS LES CARTES
+========================================================== */
+
+.btn-card {
+    display: inline-block;
+
+    margin-top: 12px;
+    padding: 10px 18px;
+
+    background: #DFAF00;
+    color: #35452F;
+
+    border-radius: 25px;
+
+    font-weight: bold;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
 }
 
-.upcoming-services h2::after {
-    content: " (prochainement)";
-    font-size: 0.7em;
-    color: #a58b73;
+.card:hover .btn-card {
+    background: #C99800;
+    transform: translateY(-2px);
 }
 
-.upcoming-services .card {
-    background: #f0ebe5;
-    opacity: 0.75;
 
-    filter: grayscale(20%);
-    transition: all 0.3s ease;
+/* ==========================================================
+   IMAGE MASSAGE AYURVÉDIQUE
+========================================================== */
+
+.massage-image {
+    display: block;
+
+    width: 100%;
+    max-width: 700px;
+
+    margin: 30px auto;
+
+    border-radius: 15px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+    object-fit: cover;
 }
 
-.upcoming-services .card:hover {
-    opacity: 1;
-    filter: grayscale(0%);
-}
 
 /* ==========================================================
    CONTACT
@@ -465,24 +542,31 @@ textarea {
 button {
     padding: 12px;
 
-    background: #a58b73;
-    color: #fff;
+    background: #DFAF00;
+    color: #35452F;
 
     border: none;
     border-radius: 10px;
 
     cursor: pointer;
-    transition: 0.3s;
+
+    font-weight: bold;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
 }
 
 button:hover {
-    background: #8e7460;
+    background: #C99800;
+    transform: translateY(-2px);
 }
 
 .success {
     margin-top: 10px;
     color: #2e7d32;
 }
+
 
 /* ==========================================================
    BOUTONS
@@ -496,32 +580,23 @@ button:hover {
 
     text-decoration: none;
 
+    background: #DFAF00;
+    color: #35452F;
+
     border-radius: 8px;
 
-    transition: 0.3s ease;
+    font-weight: bold;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
 }
 
 .btn-retour:hover {
+    background: #C99800;
     transform: translateY(-2px);
 }
 
-/* ==========================================================
-   IMAGE MASSAGE AYURVÉDIQUE
-========================================================== */
-
-.massage-image {
-    display: block;
-    width: 100%;
-    max-width: 700px;
-
-    margin: 30px auto;
-
-    border-radius: 15px;
-
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-
-    object-fit: cover;
-}
 
 /* ==========================================================
    FOOTER
@@ -532,9 +607,10 @@ footer {
 
     text-align: center;
 
-    background: #35251F;
-    color: #fff;
+    background: #355E3B;
+    color: #FFF9EC;
 }
+
 
 /* ==========================================================
    RESPONSIVE - TABLETTE
@@ -544,8 +620,11 @@ footer {
 
     .navbar {
         grid-template-columns: 1fr;
+
         height: auto;
+
         padding: 15px 20px;
+
         gap: 15px;
     }
 
@@ -567,20 +646,24 @@ footer {
         justify-self: center;
 
         display: flex;
+
         flex-wrap: wrap;
+
         justify-content: center;
+
         gap: 15px;
     }
 
     .hero {
-        height: 400px;
-        padding: 20px;
+        min-height: 400px;
+        padding: 40px 20px;
     }
 
     .hero h2 {
         font-size: 28px;
     }
 }
+
 
 /* ==========================================================
    RESPONSIVE - MOBILE
@@ -592,7 +675,9 @@ footer {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
         text-align: center;
+
         gap: 15px;
     }
 
@@ -606,16 +691,69 @@ footer {
         transform: none;
     }
 
+    .navbar {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        height: auto;
+
+        padding: 15px 20px;
+
+        gap: 15px;
+    }
+
+    .nav-spacer {
+        display: none;
+    }
+
+    .logo-container {
+        display: flex;
+        justify-content: center;
+
+        width: 100%;
+    }
+
     .titre-logo {
         width: 100%;
-        max-width: 250px;
+        max-width: 170px;
+
         height: auto;
+
         margin: 0 auto;
+    }
+
+    .nav-links {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+
+        margin: 0 auto;
+
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+
+    .instagram-nav {
+        padding: 8px 14px;
     }
 
     .hero {
         height: auto;
         min-height: 350px;
+
         padding: 40px 20px;
     }
 
@@ -629,7 +767,7 @@ footer {
     }
 
     .services {
-        padding: 40px 15px;
+        padding: 45px 15px;
     }
 
     .cards {
@@ -653,68 +791,9 @@ footer {
         font-size: 16px;
     }
 
-    .navbar {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: auto;
-        padding: 15px 20px;
-        gap: 15px;
-        box-sizing: border-box;
-
-    /* .navbar {
-        flex-direction: row;
-        height: 110px;
-    } */
-
-
-    .nav-links {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        width: auto;
-        margin: 0 auto;
-        gap: 8px;
-    }
-
-
-    /* .nav-links {
-        grid-column: 1;
-        justify-self: center;
-
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-
-        width: 100%;
-        margin-left: 0;
-        gap: 8px;
-    } */
-
-
-
-    .nav-spacer {
-    display: none;
-    }
-
-    .titre-logo {
-        max-width: 170px;
-    }
-
-    .nav-links a {
-    font-size: 0.85rem;
-    }
-
-    .instagram-nav {
-        padding: 8px 14px;
-    }
-
     .instagram-link {
         position: absolute;
+
         top: 10px;
         left: 10px;
     }
@@ -724,15 +803,12 @@ footer {
         height: 32px;
     }
 
-    .instagram-link img:hover {
-        transform: scale(1.1);
-    }
-
     blockquote {
         font-size: 1.2rem;
         padding: 15px;
     }
 }
+
 
 /* ==========================================================
    RESPONSIVE - PETITS SMARTPHONES
@@ -741,22 +817,24 @@ footer {
 @media (max-width: 480px) {
 
     .titre-logo {
-        width: 350px;
+        width: 100%;
         max-width: 140px;
     }
 
     .nav-links {
-    gap: 5px;
-    justify-content: center;
-    align-items: center;
+        gap: 6px;
     }
 
     .nav-links a {
-    font-size: 0.75rem;
+        font-size: 0.75rem;
     }
 
     .instagram-nav {
         padding: 6px 10px;
+    }
+
+    .hero {
+        padding: 35px 15px;
     }
 
     .hero h2 {
@@ -785,15 +863,12 @@ footer {
     }
 }
 
+
 /* ==========================================================
    DESKTOP
 ========================================================== */
 
 @media (min-width: 900px) {
-
-    /* .navbar {
-        padding: 25px 5%;
-    } */
 
     .titre-logo {
         width: 350px;
