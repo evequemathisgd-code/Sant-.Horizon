@@ -256,8 +256,21 @@ header h1 {
     background-repeat: no-repeat;
 }
 
-.hero-ayurvedique {
+.hero-californien {
     background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)
+        ),
+        url("/static/presta.jpg");
+        
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    .hero-ayurvedique {
+        background:
         linear-gradient(
             rgba(0, 0, 0, 0.4),
             rgba(0, 0, 0, 0.4)
