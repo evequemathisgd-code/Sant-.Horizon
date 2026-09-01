@@ -638,7 +638,7 @@ footer {
 
         padding: 15px 20px;
 
-        gap: 15px;
+        gap: 100px;
     }
 
     .nav-spacer {
@@ -691,7 +691,7 @@ footer {
 
         text-align: center;
 
-        gap: 15px;
+        gap: 100px;
     }
 
     .logo {
@@ -835,7 +835,7 @@ footer {
     }
 
     .nav-links {
-        gap: 6px;
+        gap: 20px;
     }
 
     .nav-links a {
