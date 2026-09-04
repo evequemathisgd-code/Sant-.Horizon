@@ -712,6 +712,286 @@ footer {
     }
 }
 
+/* ================================
+   PAGE CONFIDENTIALITÉ / LÉGALE
+================================ */
+
+.legal-page {
+    max-width: 900px;
+    margin: 70px auto 90px;
+    padding: 0 25px;
+    color: #3f4540;
+}
+
+
+/* ---------- Titre principal ---------- */
+
+.legal-page h1 {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin: 0 0 65px;
+    color: #354238;
+}
+
+.legal-page h1::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 2px;
+    margin: 22px auto 0;
+    background-color: #8b9a89;
+}
+
+
+/* ---------- Sections ---------- */
+
+.legal-section {
+    margin-bottom: 48px;
+    padding-bottom: 38px;
+    border-bottom: 1px solid rgba(80, 90, 80, 0.12);
+}
+
+.legal-section:last-of-type {
+    border-bottom: none;
+}
+
+
+/* ---------- Titres ---------- */
+
+.legal-section h2 {
+    margin: 0 0 20px;
+    font-size: 1.35rem;
+    font-weight: 500;
+    color: #354238;
+    line-height: 1.4;
+}
+
+
+/* ---------- Texte ---------- */
+
+.legal-section p {
+    margin: 0 0 16px;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555c56;
+}
+
+.legal-section p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ---------- Listes ---------- */
+
+.legal-section ul {
+    margin: 20px 0;
+    padding-left: 25px;
+}
+
+.legal-section li {
+    margin-bottom: 10px;
+    padding-left: 5px;
+    line-height: 1.7;
+    color: #555c56;
+}
+
+
+/* ---------- Liens ---------- */
+
+.legal-section a {
+    color: #596b5b;
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+}
+
+.legal-section a:hover {
+    color: #354238;
+}
+
+
+/* ---------- Dernière mise à jour ---------- */
+
+.legal-update {
+    margin: 45px 0 0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #8a908a;
+    font-style: italic;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 700px) {
+
+    .legal-page {
+        margin: 45px auto 60px;
+        padding: 0 20px;
+    }
+
+    .legal-page h1 {
+        font-size: 1.9rem;
+        margin-bottom: 45px;
+    }
+
+    .legal-section {
+        margin-bottom: 38px;
+        padding-bottom: 30px;
+    }
+
+    .legal-section h2 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .legal-section p,
+    .legal-section li {
+        font-size: 0.95rem;
+        line-height: 1.75;
+    }
+
+    .legal-section ul {
+        padding-left: 20px;
+    }
+
+    .legal-update {
+        font-size: 0.8rem;
+    }
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    padding: 45px 7% 25px;
+    border-top: 1px solid rgba(80, 90, 80, 0.15);
+}
+
+
+/* Partie supérieure */
+
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: 75px;
+    margin-right: 75px;
+    gap: 50px;
+}
+
+
+/* Logo / nom */
+
+.footer-brand strong {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #354238;
+}
+
+.footer-brand p {
+    margin-top: 10px;
+    line-height: 1.6;
+    font-size: 0.9rem;
+    color: #777d77;
+}
+
+
+/* Liens */
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.footer-links a {
+    color: #555c56;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #354238;
+}
+
+
+/* Ligne du bas */
+
+.footer-bottom {
+    max-width: 1100px;
+    margin: 35px auto 0;
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(80, 90, 80, 0.10);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #8a908a;
+}
+
+
+/* Instagram tout à droite */
+
+.footer-instagram {
+    color: #596b5b;
+    font-size: 0.9rem;
+    text-decoration: none;
+
+    transition: opacity 0.2s ease;
+}
+
+.footer-instagram:hover {
+    opacity: 0.65;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 700px) {
+
+    footer {
+        padding: 40px 20px 25px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-content: center;
+        gap: 15px 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+}
 
 /* ==========================================================
    RESPONSIVE - MOBILE
