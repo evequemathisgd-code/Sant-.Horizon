@@ -1,44 +1,14 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>404 - Page introuvable | santé.horizon</title>
+{% extends "base.html" %}
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block title %}
+santé.horizon - Massage à domicile Annecy
+{% endblock %}
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
-</head>
+{% block description %}
+Massage à domicile à Annecy. Massages détente, bien-être et équilibre.
+{% endblock %}
 
-<body>
-
-<header>
-
-    <div class="navbar404">
-
-        <div class="logo-container">
-            <a href="/">
-                <img src="{{ url_for('static', filename='sh.png') }}"
-                     alt="santé.horizon"
-                     class="titre-logo404">
-            </a>
-        </div>
-
-        <nav class="nav-links">
-            <a href="/">Accueil</a>
-            <a href="/philosophie">Ma philosophie</a>
-
-            <a href="https://www.instagram.com/sante.horizon/"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="instagram-nav">
-                Instagram
-            </a>
-        </nav>
-
-    </div>
-
-</header>
+{% block content %}
 
 <section class="hero404">
     <div class="hero-content">
@@ -60,9 +30,4 @@
     </div>
 </section>
 
-<footer>
-    <p>© 2026 santé.horizon - Annecy</p>
-</footer>
-
-</body>
-</html>
+{% endblock %}
