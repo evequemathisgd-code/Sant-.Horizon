@@ -1,47 +1,14 @@
-<!DOCTYPE html>
-<html lang="fr">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Massage Ayurvédique | Horizon Zen</title>
+{% block title %}
+santé.horizon - Massage à domicile Annecy
+{% endblock %}
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
-</head>
+{% block description %}
+Massage à domicile à Annecy. Massages détente, bien-être et équilibre.
+{% endblock %}
 
-<body>
-
-<header>
-
-    <div class="navbar">
-        <div class="nav-spacer"></div>
-
-        <div class="logo-container">
-            <a href="/">
-                <img src="{{ url_for('static', filename='sh.png') }}"
-                     alt="santé.horizon"
-                     class="titre-logo">
-            </a>
-        </div>
-
-        <nav class="nav-links">
-            <a href="/">Accueil</a>
-            <a href="/philosophie">Ma philosophie</a>
-
-            <a href="https://www.instagram.com/sante.horizon/"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="instagram-nav">
-                Instagram
-            </a>
-        </nav>
-
-    </div>
-
-</header>
-
-<!-- HERO -->
+{% block content %}
 
 <section class="hero hero-ayurvedique">
 
@@ -185,29 +152,20 @@
 
 <!-- RETOUR -->
 
-<section class="contact">
+            <section class="contact">
 
-    <h2>Envie de découvrir ce massage&nbsp;?</h2>
+                <h2>Envie de découvrir ce massage&nbsp;?</h2>
 
-    <p>
-        Accordez-vous un véritable moment de reconnexion et laissez
-        l'Ayurveda vous guider vers un mieux-être durable.
-    </p>
+                <p>
+                    Accordez-vous un véritable moment de reconnexion et laissez
+                    l'Ayurveda vous guider vers un mieux-être durable en suivant ce lien : <br>
+                    
+                </p>
 
-    <a href="{{ url_for('index') }}" class="btn-retour">
-        Retour
-    </a>
+                <a href="{{ url_for('index') }}" class="btn-retour">
+                    Retour
+                </a>
 
-</section>
+            </section>
 
-<!-- FOOTER -->
-
-<footer>
-
-    <p>&copy; 2026 Horizon Zen - Tous droits réservés.</p>
-
-</footer>
-
-</body>
-
-</html>
+{% endblock %}
