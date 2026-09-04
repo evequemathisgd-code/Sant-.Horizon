@@ -52,6 +52,14 @@ def massage_californien():
 def massage_ayurvedique():
     return render_template("massage_ayurvedique.html")
 
+@app.route("/mentions-legales")
+def mentions_legales():
+    return render_template("mentions_legales.html")
+
+@app.route("/confidentialite")
+def confidentialite():
+    return render_template("confidentialite.html")
+
 @app.errorhandler(404)
 def page_not_found(error):
     app.logger.warning(f"404 : {error}")
