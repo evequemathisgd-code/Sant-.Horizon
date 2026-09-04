@@ -884,7 +884,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-left: 75px;
+    margin-left: 80px;
     margin-right: 75px;
     gap: 50px;
 }
