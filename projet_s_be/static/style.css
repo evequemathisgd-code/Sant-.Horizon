@@ -234,6 +234,30 @@ header h1 {
     display: flex;
     margin-top: 10px;
     padding: 14px 28px;
+    background: #DFAF00;
+    color: #35452F;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.btn-rendez-vous:hover {
+    background: #C99800;
+    color: #35452F;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-rendez-vous-philosophie {
+    display: flex;
+    margin-top: 10px;
+    padding: 14px 28px;
     background: #355E3B;
     color: #FFF8E8;
     text-decoration: none;
@@ -247,13 +271,12 @@ header h1 {
         box-shadow 0.3s ease;
 }
 
-.btn-rendez-vous:hover {
+.btn-rendez-vous-philosophie:hover {
     background: #294A2F;
     color: #FFF8E8;
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
-
 
 
 /* ==========================================================
