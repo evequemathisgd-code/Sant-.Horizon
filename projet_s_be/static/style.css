@@ -231,11 +231,11 @@ header h1 {
    bouton rendez-vous
 ========================================================== */
 .btn-rendez-vous {
-    display: inline-block;
+    display: flex;
     margin-top: 10px;
     padding: 14px 28px;
-    background: #DFAF00;
-    color: #35452F;
+    background: #355E3B;
+    color: #FFF8E8;
     text-decoration: none;
     border-radius: 30px;
     font-weight: bold;
@@ -248,8 +248,8 @@ header h1 {
 }
 
 .btn-rendez-vous:hover {
-    background: #C99800;
-    color: #35452F;
+    background: #294A2F;
+    color: #FFF8E8;
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
