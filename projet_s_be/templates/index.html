@@ -1,57 +1,21 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
 
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>santé.horizon - Massage à domicile Annecy</title>
-    <meta name="description"
-      content="Massage à domicile à Annecy. Massages détente, bien-être et équilibre.">
-    <meta name="robots" content="index, follow">
-    <!-- <link rel="canonical" href="https://ton-domaine.fr/"> -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">                  <!--responsive--> 
-</head>
+{% block title %}
+santé.horizon - Massage à domicile Annecy
+{% endblock %}
 
-<body>
+{% block description %}
+Massage à domicile à Annecy. Massages détente, bien-être et équilibre.
+{% endblock %}
 
-<header>
-
-    <div class="navbar">
-        <div class="nav-spacer"></div>
-
-        <div class="logo-container">
-            <a href="/">
-                <img src="{{ url_for('static', filename='sh.png') }}"
-                     alt="santé.horizon"
-                     class="titre-logo">
-            </a>
-        </div>
-
-        <nav class="nav-links">
-            <a href="/">Accueil</a>
-            <a href="/philosophie">Ma philosophie</a>
-
-            <a href="https://www.instagram.com/sante.horizon/"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="instagram-nav">
-                Instagram
-            </a>
-        </nav>
-
-    </div>
-
-    <!-- <p class="slogan">Massage à domicile à Annecy & environs</p> -->
-
-</header>
+{% block content %}
 
 <section class="hero">
     <div class="hero-content">
         <h2>Retrouvez votre équilibre</h2>
 
         <p>
-            Aujourd’hui, je me lance  dans le massage avec une envie simple :
+            je me suis lancé  dans le massage avec une envie simple :
             offrir de vrais moments de détente et de bien-être.
         </p>
 
@@ -78,7 +42,7 @@
         </p>
 
         <a href="https://calendar.app.google/FCgzah6foK6kDW3w8" target="_blank" rel="noopener noreferrer" class="btn-rendez-vous"> Prendre rendez-vous </a>
-        
+    </div>   
 </section>
 
 <section class="services">
@@ -158,26 +122,4 @@
     </div>
 </section>
 
-<!-- <section class="contact">
-    <h2>Me contacter</h2>
-
-
-<form method="POST" action="/contact">
-    <input type="text" name="nom" placeholder="Votre nom" required>
-    <input type="email" name="email" placeholder="Votre email" required>
-    <textarea name="message" placeholder="Votre message" required></textarea>
-    <button type="submit">Envoyer</button>
-</form>
-
-{% if success %}
-    <p class="success">Message envoyé ✔</p>
-{% endif %}
-
-</section> -->
-
-<footer>
-    <p>© 2026 santé.horizon - Annecy</p>
-</footer>
-
-</body>
-</html>
+{% endblock %}
