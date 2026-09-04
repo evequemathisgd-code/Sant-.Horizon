@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>
+        {% block title %}santé.horizon - Massage à domicile Annecy{% endblock %}
+    </title>
+
+    <meta name="description"
+          content="{% block description %}Massage à domicile à Annecy. Massages détente, bien-être et équilibre.{% endblock %}">
+
+    <meta name="robots" content="index, follow">
+
+    <!-- <link rel="canonical" href="https://ton-domaine.fr/"> -->
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="icon"
+          href="{{ url_for('static', filename='favicon.ico') }}">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+</head>
+
+
+<body>
+
+<header>
+
+    <div class="navbar">
+
+        <div class="nav-spacer"></div>
+
+        <div class="logo-container">
+            <a href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='sh.png') }}"
+                     alt="santé.horizon"
+                     class="titre-logo">
+            </a>
+        </div>
+
+        <nav class="nav-links">
+
+            <a href="{{ url_for('index') }}">
+                Accueil
+            </a>
+
+            <a href="{{ url_for('philosophie') }}">
+                Ma philosophie
+            </a>
+
+            <a href="https://www.instagram.com/sante.horizon/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="instagram-nav">
+                Instagram
+            </a>
+
+        </nav>
+
+    </div>
+
+    <!--
+    <p class="slogan">
+        Massage à domicile à Annecy & environs
+    </p>
+    -->
+
+</header>
+
+
+<!-- =========================================================
+     CONTENU PROPRE À CHAQUE PAGE
+     ========================================================= -->
+
+{% block content %}
+{% endblock %}
+
+
+<!-- =========================================================
+     FOOTER COMMUN
+     ========================================================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div>
+            <strong>santé.horizon</strong>
+
+            <p>
+                Massage bien-être à domicile<br>
+                Annecy et environs
+            </p>
+        </div>
+
+
+        <div>
+
+            <a href="{{ url_for('index') }}">
+                Accueil
+            </a>
+
+            <a href="{{ url_for('philosophie') }}">
+                Ma philosophie
+            </a>
+
+            <a href="{{ url_for('mentions_legales') }}">
+                Mentions légales
+            </a>
+
+            <a href="{{ url_for('confidentialite') }}">
+                Confidentialité
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <a href="https://www.instagram.com/sante.horizon/"
+               target="_blank"
+               rel="noopener noreferrer">
+                Instagram
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <p>
+        © 2026 santé.horizon — Tous droits réservés
+    </p>
+
+</footer>
+
+
+</body>
+</html>
