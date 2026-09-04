@@ -1,47 +1,15 @@
-<!DOCTYPE html>
-<html lang="fr">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Massage Californien | Horizon Zen</title>
+{% block title %}
+santé.horizon - Massage à domicile Annecy
+{% endblock %}
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
-</head>
+{% block description %}
+Massage à domicile à Annecy. Massages détente, bien-être et équilibre.
+{% endblock %}
 
-<header>
+{% block content %}
 
-    <div class="navbar">
-        <div class="nav-spacer"></div>
-
-        <div class="logo-container">
-            <a href="/">
-                <img src="{{ url_for('static', filename='sh.png') }}"
-                     alt="santé.horizon"
-                     class="titre-logo">
-            </a>
-        </div>
-
-        <nav class="nav-links">
-            <a href="/">Accueil</a>
-            <a href="/philosophie">Ma philosophie</a>
-
-            <a href="https://www.instagram.com/sante.horizon/"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="instagram-nav">
-                Instagram
-            </a>
-        </nav>
-
-    </div>
-
-    <!-- <p class="slogan">Massage à domicile à Annecy & environs</p> -->
-
-</header>
-
-    <!-- HERO -->
     <section class="hero hero-californien">
 
         <div class="hero-content">
@@ -198,14 +166,4 @@
 
     </section>
 
-    <!-- FOOTER -->
-
-    <footer>
-
-        <p>&copy; 2026 Horizon Zen - Tous droits réservés.</p>
-
-    </footer>
-
-</body>
-
-</html>
+   {% endblock %}
